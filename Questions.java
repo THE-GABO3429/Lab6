@@ -1,3 +1,4 @@
+import java.util.Random;
 
 /**
  * Write a description of class Questions here.
@@ -18,10 +19,15 @@ public class Questions
      * 6)I used control F/f3, and it was easy for the first one, the second one was a little difficult since
      * length is a parameter its self
      * 7)trim() | text.trim()
-     * 8)
-     * 9)
-     */
-    
+     * 8)done
+     * 9)done
+     * 10)it returns a boolean
+     * 11) done
+     * 12)java.util | creats a R.N.G | public Random() | by
+     * 14)priavte Random RNG
+     * 
+    */
+    private Random RNG;
     /**
      * Constructor for objects of class Questions
      */
