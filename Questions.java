@@ -1,5 +1,7 @@
 import java.util.Random;
 import java.util.ArrayList;
+import java.util.HashMap;
+
 /**
  * Write a description of class Questions here.
  *
@@ -36,11 +38,25 @@ public class Questions
      * 22)
      * 23)
      * Part 2
-     * 24)A hash map is
+     * 24)A hash map is a method that consistance of two parramter wich are both strings but are called kays and numbers
+     * we would use this to have a ArrayList where every string has a "number" associated with.
+     * 25)
     */
     private Random RNG;
     private ArrayList<String> response;
-    
+    private HashMap<String,String> PhoneBook;
+    public void MapTester(){
+        PhoneBook = new HashMap<>();
+        enterNumber("Henry", "123");
+        enterNumber("Ben", "765");
+        PhoneBook.put("Alrtire", "643");
+    }
+    public void enterNumber(String name, String number){
+        PhoneBook.put(name, number);
+    }
+    public String lookupNumber(String name){
+        return PhoneBook.get(name);
+    }
     public void randomngTester(){
         RNG = new Random();
         response = new ArrayList<>();
