@@ -1,5 +1,5 @@
 import java.util.Random;
-
+import java.util.ArrayList;
 /**
  * Write a description of class Questions here.
  *
@@ -23,11 +23,64 @@ public class Questions
      * 9)done
      * 10)it returns a boolean
      * 11) done
-     * 12)java.util | creats a R.N.G | public Random() | by
-     * 14)priavte Random RNG
-     * 
+     * 12)java.util | creats a R.N.G | public Random() | by creating a new Random object
+     * 13)done
+     * 14)
+     * 15)
+     * 16)
+     * 17)
+     * 18)
+     * 19)
+     * 20)
+     * 21)
+     * 22)
+     * 23)
+     * Part 2
+     * 24)A hash map is
     */
     private Random RNG;
+    private ArrayList<String> response;
+    
+    public void randomngTester(){
+        RNG = new Random();
+        response = new ArrayList<>();
+        fillResponses();
+    }
+    private void fillResponses(){
+        response.add("yes");
+        response.add("no");
+        response.add("maybe");
+        response.add("no idea");
+        response.add("I know but I won't tell you");
+        response.add("...");
+    }
+    public void printOneRNG(){
+        System.out.println(RNG.nextInt(1000));
+    }
+    public void printMultRNG(int howMany){
+        int index = 0;
+        while (index < howMany){
+            System.out.println("New random number "+ (index+1) + ": " + RNG.nextInt(1000));
+            index ++;
+        }
+    }
+    public String getResponse(){
+        int index = RNG.nextInt(3);
+        
+        if (index == 0){
+            return "yes";
+        }
+        else if (index == 1){
+            return "no";
+        }
+        else{
+            return "Maybe";
+        }
+    }
+    public String getBetterResponses(){
+        int index = RNG.nextInt(response.size());
+        return response.get(index);
+    }
     /**
      * Constructor for objects of class Questions
      */
